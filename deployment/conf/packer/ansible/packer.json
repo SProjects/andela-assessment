@@ -1,6 +1,6 @@
 {
     "variables": {
-        "service_account_json": "../../tf/secrets/account.json",
+        "service_account_json": "../../../tf/secrets/account.json",
         "project_id": "coral-hydra-166819"
     },
     "builders": [
@@ -21,8 +21,8 @@
     ],
     "provisioners": [
         {
-            "type": "shell",
-            "script": "setup.sh"
+            "type": "ansible",
+            "playbook_file": "nginx.yaml"
         }
     ]
 }

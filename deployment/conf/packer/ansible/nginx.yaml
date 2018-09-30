@@ -1,0 +1,12 @@
+---
+- hosts: all
+  become: true
+  remote_user: ansible
+  gather_facts: no
+  tasks: 
+    - name: "Install system updates"
+      apt: 
+        update_cache: yes
+  
+    - name: "Install nginx"
+      apt: name=nginx state=present

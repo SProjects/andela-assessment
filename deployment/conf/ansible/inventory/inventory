@@ -1,4 +1,4 @@
-web_server ansible_ssh_host=35.232.163.147
+web_server ansible_ssh_host=35.224.224.95
 
 [web]
 web_server

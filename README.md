@@ -11,6 +11,8 @@
 ### Technologies
 - Terraform
 - bash script
+- Packer
+- Ansible
 
 ## How to setup infrastructure and provision nginx
 
@@ -21,8 +23,8 @@
 - Run `terraform apply`. Apply will use the script in `assess-nginx/deployment/tf/scripts/setup.sh` to install nginx.
 - Use the `public-ip` that will display at the end of the apply process to view the nginx default page.
 
-### Using: terraform and packer
-- Navigate to `assess-nginx/deployment/conf/packer`
+### Using: terraform, packer and bash
+- Navigate to `assess-nginx/deployment/conf/packer/shell`
 - Make sure to edit the `packer.json` to provide the correct `project_id` that corresponds to the service account json file you added in the pre-req step.
 - Run `packer validate packer.json` to determine if the setup is correct.
 - Run `packer build --force`
@@ -34,5 +36,10 @@ terraform init -var="image_name=ubuntu-nginx-server-image"
 terraform plan -var="image_name=ubuntu-nginx-server-image"
 terraform apply -var="image_name=ubuntu-nginx-server-image"
 ```
+- Use the public-ip output in a browser to view nginx default page.
+
+### Using: terraform, packer and ansible
+- Navigate to `assess-nginx/deployment/conf/packer/ansible`
+- Follow the instruction in `Using: terraform, packer and bash`
 
 ### Using: terraform and ansible

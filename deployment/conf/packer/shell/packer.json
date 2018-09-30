@@ -1,0 +1,28 @@
+{
+    "variables": {
+        "service_account_json": "../../../tf/secrets/account.json",
+        "project_id": "coral-hydra-166819"
+    },
+    "builders": [
+        {
+            "type": "googlecompute",
+            "project_id": "{{user `project_id`}}",
+            "machine_type": "f1-micro",
+            "source_image": "ubuntu-1604-xenial-v20170815a",
+            "region": "us-central1",
+            "zone": "us-central1-c",
+            "ssh_username": "webserver",
+            "image_description": "nginx webserver",
+            "image_family": "ubuntu-1604-lts",
+            "image_name": "ubuntu-nginx-server-image",
+            "disk_size": 10,
+            "account_file": "{{ user `service_account_json`}}"
+        }
+    ],
+    "provisioners": [
+        {
+            "type": "shell",
+            "script": "setup.sh"
+        }
+    ]
+}
