@@ -43,3 +43,4 @@ terraform apply -var="image_name=ubuntu-nginx-server-image"
 - Follow the instruction in `Using: terraform, packer and bash`
 
 ### Using: terraform and ansible
+- This last one is abit convoluted and I am still trying to make it work.

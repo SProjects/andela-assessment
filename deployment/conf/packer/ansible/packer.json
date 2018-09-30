@@ -11,7 +11,7 @@
             "source_image": "ubuntu-1604-xenial-v20170815a",
             "region": "us-central1",
             "zone": "us-central1-c",
-            "ssh_username": "webserver",
+            "ssh_username": "ansible",
             "image_description": "nginx webserver",
             "image_family": "ubuntu-1604-lts",
             "image_name": "ubuntu-nginx-server-image",

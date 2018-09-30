@@ -1,3 +1,4 @@
 deployment/tf/secrets/account.json
 deployment/tf/terraform.*
 deployment/tf/.terraform/
+deployment/conf/packer/ansible/cert/*.pub

@@ -4,9 +4,6 @@
   become_method: sudo
   gather_facts: True
   tasks:
-    - name: "Functionality check"
-      shell:
-        
     - name: "Install system updates"
       apt: 
         update_cache: yes

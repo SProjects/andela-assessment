@@ -3,7 +3,7 @@
   become: true
   remote_user: ansible
   gather_facts: no
-  tasks: 
+  tasks:
     - name: "Install system updates"
       apt: 
         update_cache: yes
