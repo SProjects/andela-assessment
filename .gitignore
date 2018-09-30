@@ -1,0 +1,3 @@
+deployment/tf/secrets/account.json
+deployment/tf/terraform.*
+deployment/tf/.terraform/
